@@ -1,0 +1,11 @@
+/* https://addons.mozilla.org/firefox/addon/new-tab-context/ */
+
+/* New Tab Context - move menu entry to the top */
+#tabContextMenu menuitem[label="New Tab"] {
+  -moz-box-ordinal-group: 0 !important;
+}
+/* New Tab Context - hide the icon and separator */
+#tabContextMenu menuitem[label="New Tab"] .menu-iconic-icon,
+#context_closeTab + menuseparator:last-of-type {
+  display: none !important;
+}

@@ -1,0 +1,31 @@
+/* IMPORTANT: the src: local() descriptor requires a font face name,
+not a font family. On Windows, you find out what that is by clicking
+the font in C:\Windows\Fonts. It's displayed in the title of the window
+that opens (and not in the window itself).
+https://bugzilla.mozilla.org/show_bug.cgi?id=1287089#c1
+*/
+
+/* https://fonts.google.com/?selection.family=Delius */
+@font-face {
+  font-family: "Comic Sans MS";
+  src: local("Delius-Regular");
+}
+
+@font-face {
+  font-family: "Courier New";
+  src: local("Consolas"),
+  local("Ubuntu Mono"),
+  local("Monaco");
+}
+
+/* https://fonts.google.com/?selection.family=PT+Serif */
+@font-face {
+  font-family: "Times New Roman";
+  src: local("PT Serif");
+}
+
+/* https://fonts.google.com/?selection.family=Cabin */
+@font-face {
+  font-family: "Trebuchet MS";
+  src: local("Cabin Regular");
+}

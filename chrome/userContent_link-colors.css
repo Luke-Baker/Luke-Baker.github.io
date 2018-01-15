@@ -1,0 +1,28 @@
+/* IMPORTANT:
+   Doesn't work in Private Browsing mode or when saving history is disabled
+   Doesn't work if links are randomized, e.g. with tracking parameters like utm=…
+   As long as the L-V-H-A order is maintained, you can omit lines you don't want to define
+   Use any or all of the below style blocks. If several match one site, the last one is applied
+   The colors are just examples; feel free to change them - https://www.w3schools.com/cssref/css_colors.asp */
+
+/* Link colors on all sites */
+a:link { color: blue !important; }
+a:visited { color: purple !important; }
+a:hover { color: blueviolet !important; }
+a:active { color: red !important; }
+
+/* Link colors on all sites, except those specified */
+@-moz-document regexp("https?://(?!(addons.mozilla.org|www.reddit.com)).*") {
+  a:link { color: saddlebrown !important; }
+  a:visited { color: darkred !important; }
+  a:hover { color: crimson !important; }
+  a:active { color: darkgoldenrod !important; }
+}
+
+/* Link colors on specific sites */
+@-moz-document domain("youtube.com"), domain("wikipedia.org") {
+  a:link { color: limegreen !important; }
+  a:visited { color: darkolivegreen !important; }
+  a:hover { color: lightgreen !important; }
+  a:active { color: lawngreen !important; }
+}

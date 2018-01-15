@@ -1,0 +1,7 @@
+/* Fullscreen video warning. IMPORTANT: if used directly in
+userChrome.css, it must be placed above the namespace line. */
+@-moz-document url(chrome://browser/content/browser.xul) {
+#fullscreen-warning {
+  display: none !important;
+}
+}
