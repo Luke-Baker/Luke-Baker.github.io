@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name                 Cookies button
-// @version              1.0
-// @description          Left-click toggles accepting first-party cookies and rejecting all; middle-click opens cookie manager.
+// @version              1.1
+// @description          Left-click toggles accepting first-party cookies and rejecting all.
 // @author               https://www.reddit.com/user/Luke-Baker/
 // @license              https://creativecommons.org/licenses/by-sa/4.0/
 // @credits1             https://gist.github.com/Sporif/ad6e917d87787491538bac80d3c8918c
 // @credits2             https://www.gozer.org/mozilla/userChrome.js/scripts/toogleCookies_menuitem
 // @credits3             https://www.svgrepo.com/svg/47801/cookie
-// @compatibility        Created 2018-01-15. Tested on Firefox 59.
+// @compatibility        Updated 2018-06-28. Tested on Firefox 63.
 // ==/UserScript==
 
 (function() {
@@ -67,10 +67,13 @@
       butt.setAttribute('tooltiptext', (cookieStatus() !== 2) ? "Disable cookies" : "Enable cookies");
       butt.style.filter = (cookieStatus() !== 2 ? "grayscale(0%)" : "grayscale(100%)");
     }
+    /*
+    // Obsolete since the old cookie manager was removed. If you know how to open the new one, please let me know.
     // Middle-click: open cookie window
     else if (event.button == 1) {
       window.open("chrome://browser/content/preferences/cookies.xul","cookiemanager", "chrome,resizable");
     }
+    */
     // Any other button: default action
     else return;
 
