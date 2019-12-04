@@ -4,8 +4,12 @@
 // @description          Load a custom link or local file, instead of the default new tab page (about:newtab).
 // @author               https://www.reddit.com/user/Luke-Baker/
 // @license              https://creativecommons.org/licenses/by-sa/4.0/
-// @compatibility        Created 2018-01-15. Tested on Firefox 59.
+// @compatibility        Created 2018-01-15. Tested on Firefox 71.
 // ==/UserScript==
+
+// For Firefox 72 onward, see the autoconfig alternative to this:
+// https://support.mozilla.org/questions/1251199#answer-1199709
+
 (function() {
 
   // IMPORTANT: when there's no filename, be sure to include a trailing slash at the end.
