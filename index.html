@@ -320,7 +320,7 @@ li {line-height:1.6;}
     <div class="w3-container">
       <h1 class="w3-text-teal" id="my-customizations">My customizations</h1>
 
-        <h2>userChrome.js</h2>
+        <h2>userChrome.js - obsolete in Firefox 72</h2>
         <div class="customization-container">
           <div class="customization-item" id="userJS-1">
             <a class="customization-link" href="chrome\NewTab_custom-page.uc.js">
@@ -449,7 +449,7 @@ li {line-height:1.6;}
     <div class="w3-container">
       <h1 class="w3-text-teal" id="external-links">External links</h1>
 
-      <h2>userChrome.js</h2>
+      <h2>userChrome.js - obsolete in Firefox 72</h2>
       <ul>
         <li><a class="coloredlink" href="https://gist.github.com/Sporif">Sporif</a></li>
         <li><a class="coloredlink" href="https://github.com/Endor8/userChrome.js/">Endor8</a></li>
@@ -487,7 +487,7 @@ li {line-height:1.6;}
         <ul>
           <li><span class="filename">userContent.css</span> - can change the appearance of web sites, and some internal pages like <span class="locationbar">about:newtab</span>.</li>
           <li><span class="filename">userChrome.css</span> - can change the appearance of the user interface and apply XML bindings to elements.</li>
-          <li><span class="filename">userChrome.xml</span> - Allows <span class="filename">*.uc.js</span> files placed in the <span class="filename">chrome</span> folder to run in the browser chrome. This enables some functionality that's unavailable to add-ons, like opening a <a class="coloredlink" href="https://www.reddit.com/r/startpages/">custom local page</a> in each new tab.</li>
+          <li><span class="filename">userChrome.xml</span> - Obsolete. It could be replaced with an embedded data URI binding until Firefox 72. It allowed <span class="filename">*.uc.js</span> files placed in the <span class="filename">chrome</span> folder to run in the browser chrome. This enabled some functionality that's unavailable to add-ons, like opening a <a class="coloredlink" href="https://www.reddit.com/r/startpages/">custom local page</a> in each new tab.</li>
           <li>There's no file that runs user scripts on web pages, but this can be done with an add-on like <a class="coloredlink" href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a>, <a class="coloredlink" href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, or <a class="coloredlink" href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>.</li>
         </ul>
     </div>
@@ -498,13 +498,14 @@ li {line-height:1.6;}
       <h1 class="w3-text-teal" id="usage">Usage</h1>
       <h2>Initial setup</h2>
       <ol>
+        <li>Enter <span class="locationbar">about:config</span> into Firefox's location bar, then search for the <span class="filename">toolkit.legacyUserProfileCustomizations.stylesheets</span> preference. If it's not set to <span class="filename">true</span>, double-click it to change its value, then restart Firefox.</li>
         <li>Enter <span class="locationbar">about:support</span> into Firefox's location bar.</li>
         <li>Click the <span class="button">Open Folder</span> button. This launches a file manager window with your Firefox profile folder.</li>
-        <li>Open <a class="coloredlink" href="Firefox_chrome.zip"><span class="filename">Firefox_chrome.zip</span></a>. If you extract it into your Firefox profile folder, it will create the <span class="filename">chrome</span> folder, and inside it, <span class="filename">userContent.css</span>, <span class="filename">userChrome.css</span>, and <span class="filename">userChrome.xml</span>. If you already have your own CSS files set up, only extract <span class="filename">userChrome.xml</span>, then copy the code from the ZIP's <span class="filename">userChrome.css</span> into your own.</li>
+        <li>Open <a class="coloredlink" href="Firefox_chrome.zip"><span class="filename">Firefox_chrome.zip</span></a>. If you extract it into your Firefox profile folder, it will create the <span class="filename">chrome</span> folder, and inside it, <span class="filename">userContent.css</span> and <span class="filename">userChrome.css</span>. If you already have your own CSS files set up, only copy the code from the ZIP's <span class="filename">userChrome.css</span> into your own.</li>
         <li>A restart is required for the change to take effect, though the files won't affect anything until you add some styles or scripts.</li>
       </ol>
 
-      <h2>Adding user scripts</h2>
+      <h2>Adding user scripts - obsolete in Firefox 72</h2>
       <h3>Option 1</h3>
       Simply save the <span class="filename">*.uc.js</span> files into the <span class="filename">chrome</span> folder.
       <h3>Option 2</h3>
@@ -550,7 +551,7 @@ li {line-height:1.6;}
       <a class="footer-item" href="https://www.reddit.com/user/Luke-Baker">Message me on Reddit</a>
       <a class="footer-item" href="https://www.w3schools.com/w3css/default.asp">Theme by W3.CSS Templates</a>
       <a class="footer-item" href="https://www.iconfinder.com/icons/1916076/brand_brands_firefox_logo_logos_icon">Icon by Alpár-Etele Méder</a>
-      <span class="footer-item">Last updated 2018-06-28</span>
+      <span class="footer-item">Last updated 2019-12-04</span>
     </div>
   </footer>
 
